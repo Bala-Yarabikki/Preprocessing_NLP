@@ -6,7 +6,7 @@ This python package prepared by Bala Yarabikki.
 
 Install
 
-pip install git+ssh://https://git@github.com/Bala-Yarabikki/Preprocessing_NLP.git
+pip install git+ssh://git@github.com/Bala-Yarabikki/Preprocessing_NLP.git
 
 Uninstall
 

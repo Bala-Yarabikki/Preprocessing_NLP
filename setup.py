@@ -4,8 +4,8 @@ with open('README.md','r') as file:
 	long_desc = file.read()
 
 setuptools.setup(
-	name = 'preprocess_Bala-Yarabikki',
-	version= '0.0.1',
+	name = 'preprocess_bala_yarabikki',
+	version= '0.0.2',
 	author= 'Bala Yarabikki',
 	author_email='balachowdary777@gmail.com',
 	description='This is preprocessing package',

@@ -58,12 +58,15 @@ def remove_stopwords(x):
 
 def make_base(x):
 	return utils._make_base(x)
+    
+def get_value_counts(df,col):
+    return utils._get_value_counts(df,col)
 
-def remove_commonwords(x,n=20):
-	return utils._remove_commonwords(x,n)
+def remove_commonwords(x,freq, n=20):
+	return utils._remove_commonwords(x,freq,n)
 
-def remove_rarewords(x, n=20):
-	return utils._remove_rarewords(x,n)
+def remove_rarewords(x, freq,n=20):
+	return utils._remove_rarewords(x,freq,n)
 
 def spelling_correction(x):
 	return utils._spelling_correction(x)

@@ -10,4 +10,4 @@ pip install git+ssh://git@github.com/Bala-Yarabikki/Preprocessing_NLP.git
 
 Uninstall
 
-pip uninstall Bala-Yarabikki/Preprocessing_NLP
+pip uninstall preprocess_bala_yarabikki

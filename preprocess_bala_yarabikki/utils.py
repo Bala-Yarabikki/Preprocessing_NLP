@@ -9,7 +9,7 @@ import bs4
 from bs4 import BeautifulSoup
 import unicodedata
 from textblob import TextBlob
-nlp = spacy.load('en_core_web_sm')
+#nlp = spacy.load('en_core_web_sm')
 
 def _get_wordcounts(x):
 	length = len(str(x).split())
@@ -78,20 +78,23 @@ def _make_base(x):
 		
 		x_list.append(lemma)
 	return ' '.join(x_list)
+
 def _get_value_counts(df,col):
-    text = ' '.join(df[col])
-    text = x.split()
+	text = ' '.join(df[col])
+	text = x.split()
 	freq = pd.Series(text).value_counts()
-    return freq
+	return freq
 
 def _remove_commonwords(x,freq, n=20):
 	fn = freq[:n]
-    x = ' '.join(t for t in x.split() if t not in fn)
+	x = ' '.join(t for t in x.split() if t not in fn)
 	return x
+
 def _remove_rarewords(x, freq, n=20):
 	fn = freq.tail(n)
 	x = ' '.join(t for t in x.split() if t not in fn)
 	return x
+
 def _spelling_correction(x):
 	x = TextBlob(x).correct()
 	return x
